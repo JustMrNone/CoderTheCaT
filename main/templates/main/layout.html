@@ -1,0 +1,79 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'main/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/font-awesome/css/font-awesome.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="icon" type="image/png" href="{% static 'main/img/favicon.png'%}">
+    <script src="https://kit.fontawesome.com/409c34c824.js" crossorigin="anonymous"></script>
+    <link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
+    {% block head %}
+    {% endblock head%}
+    <title>
+        {% block title %}
+        {% endblock title %}
+    </title>
+</head>
+<body>
+    <header>
+        {% block header %}
+        {% endblock header %}
+        <a href="{% url 'settings' %}">
+            <i class="fa fa-cog settingsicon" aria-hidden="true"></i>
+        </a>
+    
+        <a href="">
+            <i class="fab fa-youtube playicon" title="Subscibe to my youtube channel"></i>
+        </a>
+    
+        <a href="">
+            <i class="fab fa-github githubicon" aria-hidden="true"></i>
+        </a>
+    </header>
+    <nav class="nav">
+        <input id="menu" type="checkbox">
+        <label for="menu" title="Menu"><i class="fa fa-bars menuicon" aria-hidden="true"></i></label>
+        <ul class="menu">
+            <li>
+                <a href="{% url 'projects' %}">
+                    <span class="navitem">Projects</span>
+                    <i class="fa fa-archive icons" aria-hidden="true"></i>
+                </a>
+            </li>
+            <li>
+                <a href="{% url 'blog' %}">
+                    <span class="navitem">Blog</span>
+                    <i class="fa fa-file-text icons" aria-hidden="true"></i>
+                </a>
+            </li>
+            <li>
+                <a href="{% url 'info' %}">
+                    <span class="navitem">Info</span>
+                    <i class="fa fa-info icons" aria-hidden="true"></i>
+                </a>
+            </li>
+        </ul>
+
+        <a href="{% url 'index' %}">
+            <img src="{% static 'main/img/CatHat.png' %}" alt="Cat with Hat" class="imageicon" title="Home">
+        </a>
+
+        <a href="{% url 'index' %}">
+            <span class="top-right-text homeicon"> CoderTheCaT </span>
+        </a>
+    </nav>
+
+    {% block body %}
+    {% endblock body %}
+
+</body>
+
+<footer>
+    {% block footer %}
+    {% endblock footer %}
+</footer>
+
+</html>
