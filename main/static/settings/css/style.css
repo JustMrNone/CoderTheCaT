@@ -59,3 +59,7 @@
   .slider.round:before {
     border-radius: 50%;
   }
+
+  .txtdrk{
+    color: black;
+  }

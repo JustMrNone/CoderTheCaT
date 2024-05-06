@@ -38,11 +38,12 @@ body {
     overflow: hidden;
     
   }
+  
 .nav [type="checkbox"] {
   position: absolute;
   left: -9999px !important;
 }
-.nav [type="checkbox"] + label {
+.nav .menuicon {
   width: 60px;
   height: 60px;
   margin-left: 8px;
@@ -64,6 +65,21 @@ body {
 .nav [type="checkbox"] + label:hover {
   background: #218c74;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.navdark {
+  position: absolute;
+  top: 0%;
+  left: 0;
+  display: flex;
+  justify-content: flex-start;
+  width: 100%; /* Occupy the full width of the parent container */
+  max-width: 100%; /* Limit the maximum width to the parent container width */
+  margin: 0;
+  background-color: #7a4343;
+  overflow-x: hidden; /* Prevent horizontal overflow */
+  height: 80px;
+  overflow: hidden;
+  
 }
 
 .menu li {

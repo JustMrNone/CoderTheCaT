@@ -2,26 +2,57 @@ document.addEventListener("DOMContentLoaded", function() {
     const darkModeToggle = document.getElementById("darkModeToggle");
     const isDarkMode = localStorage.getItem("darkModeEnabled") === "true";
     const isNavDark = localStorage.getItem("navDarkEnabled") === "true";
+    const navElement = document.querySelector('.nav');
+    const elementsToColor = document.querySelectorAll('p, h1, h2, h3, h4, h5, h6');
+    const originalColors = {}; // Object to store original colors
 
-    // Apply dark mode if the preference is stored
-    if (isDarkMode) {
-        document.body.classList.add("dark-mode");
+    // Function to store original text colors of paragraphs and headings
+    function storeOriginalColors() {
+        elementsToColor.forEach(element => {
+            originalColors[element.tagName + '-' + element.className] = window.getComputedStyle(element).color;
+        });
     }
 
-    // Apply navdark mode if the preference is stored
-    if (isNavDark) {
-        document.querySelector('.nav').classList.add("navdark");
-    }
-
-    // Toggle dark mode and navdark mode, and store preferences
-    darkModeToggle.addEventListener("click", function() {
+    // Function to apply dark mode and navdark mode
+    function applyDarkMode() {
         document.body.classList.toggle("dark-mode");
-        document.querySelector('.nav').classList.toggle("navdark"); // Toggle navdark at the same time
         const darkModeEnabled = document.body.classList.contains("dark-mode");
-        const navDarkEnabled = document.querySelector('.nav').classList.contains("navdark");
+
+        // Toggle navdark class only if dark mode is enabled
+        if (darkModeEnabled) {
+            navElement.classList.add("navdark");
+        } else {
+            navElement.classList.remove("navdark");
+        }
+
+        // Change text color based on mode
+        elementsToColor.forEach(element => {
+            if (darkModeEnabled || isNavDark) {
+                element.style.color = '#fff'; // Change text color to white
+            } else {
+                element.style.color = originalColors[element.tagName + '-' + element.className]; // Restore original color
+            }
+        });
+
+        // Update local storage
+        localStorage.setItem("navDarkEnabled", darkModeEnabled && isNavDark);
         localStorage.setItem("darkModeEnabled", darkModeEnabled);
-        localStorage.setItem("navDarkEnabled", navDarkEnabled);
+    }
+
+    // Apply stored preferences
+    if (isDarkMode) {
+        applyDarkMode();
+        darkModeToggle.checked = true; // Set the checkbox to checked
+    } else {
+        // If dark mode is disabled, remove navdark class
+        navElement.classList.remove("navdark");
+    }
+
+    // Store original colors initially
+    storeOriginalColors();
+
+    // Event listener for dark mode toggle
+    darkModeToggle.addEventListener("click", function() {
+        applyDarkMode();
     });
 });
-
-
