@@ -43,7 +43,7 @@ body {
   position: absolute;
   left: -9999px !important;
 }
-.nav .menuicon {
+.nav [type="checkbox"] + label {
   width: 60px;
   height: 60px;
   margin-left: 8px;
@@ -53,7 +53,7 @@ body {
   font-size: 16px;
   cursor: pointer;
   z-index: 9999;
-  background: #40407a;
+  background: #3c6382;
   border-radius: 50%;
   margin-top: 39px;
   transform: translateY(-50%);
@@ -63,7 +63,7 @@ body {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 .nav [type="checkbox"] + label:hover {
-  background: #218c74;
+  background: #0a3d62;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 .navdark {
@@ -134,7 +134,7 @@ body {
   font-weight: bold;
 }
 .nav input:checked + label {
-  background: #40407a;
+  background: #3c6382;
   transform: translateY(calc(-50% + 4px));
 }
 .nav input:checked ~ .menu li:nth-child(1) {
