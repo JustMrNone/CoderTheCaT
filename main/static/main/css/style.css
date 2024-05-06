@@ -63,25 +63,9 @@ body {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 .nav [type="checkbox"] + label:hover {
-  background: #0a3d62;
+  background: #227093;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
-.navdark {
-  position: absolute;
-  top: 0%;
-  left: 0;
-  display: flex;
-  justify-content: flex-start;
-  width: 100%; /* Occupy the full width of the parent container */
-  max-width: 100%; /* Limit the maximum width to the parent container width */
-  margin: 0;
-  background-color: #7a4343;
-  overflow-x: hidden; /* Prevent horizontal overflow */
-  height: 80px;
-  overflow: hidden;
-  
-}
-
 .menu li {
   position: absolute;
   top: -25px;
@@ -107,7 +91,7 @@ body {
   height: 40px;
   border-radius: 50%;
   display: flex;
-  background: #F97F51; /* Default background color */
+  background: #079992; /* Default background color */
   margin-top: 45px;
   margin-left: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -115,7 +99,7 @@ body {
 }
 
 .menu li a:hover {
-  background: #EAB543; /* Background color on hover */
+  background: #38ada9; /* Background color on hover */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 .navitem {

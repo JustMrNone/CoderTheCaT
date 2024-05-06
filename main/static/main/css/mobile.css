@@ -1,0 +1,7 @@
+@media only screen and (max-width: 768px){
+    /* Navbar styles for smaller screens */
+  .imageicon {
+    display: none;
+  }
+
+  }
