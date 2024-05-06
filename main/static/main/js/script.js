@@ -4,12 +4,11 @@ document.addEventListener("DOMContentLoaded", function() {
     const isNavDark = localStorage.getItem("navDarkEnabled") === "true";
     const navElement = document.querySelector('.nav');
     const elementsToColor = document.querySelectorAll('p, h1, h2, h3, h4, h5, h6');
-    const originalColors = {}; // Object to store original colors
 
     // Function to store original text colors of paragraphs and headings
     function storeOriginalColors() {
         elementsToColor.forEach(element => {
-            originalColors[element.tagName + '-' + element.className] = window.getComputedStyle(element).color;
+            element.dataset.originalColor = window.getComputedStyle(element).color;
         });
     }
 
@@ -18,8 +17,8 @@ document.addEventListener("DOMContentLoaded", function() {
         document.body.classList.toggle("dark-mode");
         const darkModeEnabled = document.body.classList.contains("dark-mode");
 
-        // Toggle navdark class only if dark mode is enabled
-        if (darkModeEnabled) {
+        // Always add navdark class in dark mode
+        if (darkModeEnabled || isNavDark) {
             navElement.classList.add("navdark");
         } else {
             navElement.classList.remove("navdark");
@@ -30,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function() {
             if (darkModeEnabled || isNavDark) {
                 element.style.color = '#fff'; // Change text color to white
             } else {
-                element.style.color = originalColors[element.tagName + '-' + element.className]; // Restore original color
+                element.style.color = ''; // Remove inline style
             }
         });
 
@@ -43,9 +42,6 @@ document.addEventListener("DOMContentLoaded", function() {
     if (isDarkMode) {
         applyDarkMode();
         darkModeToggle.checked = true; // Set the checkbox to checked
-    } else {
-        // If dark mode is disabled, remove navdark class
-        navElement.classList.remove("navdark");
     }
 
     // Store original colors initially
