@@ -1,10 +1,12 @@
 {% extends "main/layout.html" %} 
+{% load static %}
 <!-- This allows child templates to override or extend these sections with their own content -->
 {% block title %}
     Settings
 {% endblock title %} 
 
 {% block head %}
+    <link rel="stylesheet" href="{% static 'settings/css/style.css' %}">
 
 {% endblock head %}
 
@@ -13,6 +15,13 @@
 {% endblock header%}
 
 {% block body %}
+
+<div class="containerse">
+    <label class="switch">
+        <input type="checkbox" id="darkModeToggle">
+        <span class="slider round"></span>
+    </label>
+</div>
 
 {% endblock body%}
 
