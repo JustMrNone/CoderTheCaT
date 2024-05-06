@@ -31,18 +31,18 @@
     width: 26px;
     left: 4px;
     bottom: 4px;
-    background-color: white;
+    background-color: #f7f1e3;
     -webkit-transition: .4s;
     transition: .4s;
     border-radius: 50%;
   }
   
   input:checked + .slider {
-    background-color: #2196F3;
+    background-color: #ff4d4d;
   }
   
   input:focus + .slider {
-    box-shadow: 0 0 1px #2196F3;
+    box-shadow: 0 0 1px #ff4d4d;
   }
   
   input:checked + .slider:before {
@@ -61,5 +61,5 @@
   }
 
   .txtdrk{
-    color: black;
+    color: #3d3d3d;
   }

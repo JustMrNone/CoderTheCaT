@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function() {
         // Change text color based on mode
         elementsToColor.forEach(element => {
             if (darkModeEnabled || isNavDark) {
-                element.style.color = '#fff'; // Change text color to white
+                element.style.color = '#f7f1e3'; // Change text color to white
             } else {
                 element.style.color = ''; // Remove inline style
             }
