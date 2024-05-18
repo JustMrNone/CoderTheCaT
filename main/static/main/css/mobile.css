@@ -1,7 +1,12 @@
-@media only screen and (max-width: 768px){
-    /* Navbar styles for smaller screens */
-  .imageicon {
+@media only screen and (max-width: 768px) {
+  /* Navbar styles for smaller screens */
+  .imageicon, .homeicon, .nav .menu li a, .navitem, .nav [type="checkbox"] + label {
     display: none;
   }
-
+  .settingsicon, .githubicon, .playicon {
+    display: none !important;
+  }
+  .nav {
+    position: absolute;
+  }
 }

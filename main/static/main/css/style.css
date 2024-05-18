@@ -97,7 +97,6 @@ body {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   transition: background 0.3s; /* Smooth transition for color change */
 }
-
 .menu li a:hover {
   background: #38ada9; /* Background color on hover */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
