@@ -12,7 +12,9 @@
     <script src="https://kit.fontawesome.com/409c34c824.js" crossorigin="anonymous"></script>
     <link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
     <link rel="stylesheet" href="{% static 'main/css/dark.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="{% static 'main/js/script.js' %}"></script>
+    <script src="{% static 'main/js/mobile.js' %}"></script>
     {% block head %}
     {% endblock head%}
     <title>
@@ -70,6 +72,22 @@
                 <span class="top-right-text homeicon"> CoderTheCaT </span>
             </a>
         </nav>
+
+        <div class="mobile-container">
+            <!-- Top Navigation Menu -->
+            <div class="topnav">
+                <a href="#home" class="active"></a>
+                <a href="javascript:void(0);" class="icon">
+                    <i class="fa fa-bars"></i>
+                </a>
+                <div id="myLinks">
+                    <a href="#news">Projects</a>
+                    <a href="#contact">Blog</a>
+                    <a href="#about">Info</a>
+                </div>
+            </div>
+        </div>
+        </div>
     {% block body %}
     {% endblock body %}
 

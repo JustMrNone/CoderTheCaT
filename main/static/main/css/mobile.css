@@ -1,6 +1,10 @@
+
+  .mobile-container{
+    display: none;
+  }
 @media only screen and (max-width: 768px) {
   /* Navbar styles for smaller screens */
-  .imageicon, .homeicon, .nav .menu li a, .navitem, .nav [type="checkbox"] + label {
+  .homeicon, .nav .menu li a, .navitem, .nav [type="checkbox"] + label {
     display: none;
   }
   .settingsicon, .githubicon, .playicon {
@@ -8,5 +12,50 @@
   }
   .nav {
     position: absolute;
+  }
+  html, body {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .mobile-container {
+    display: block;
+    max-width: 768px;
+    overflow: hidden;
+  }
+  
+  .topnav {
+    overflow: hidden;
+    position: relative;
+    margin: 0; /* Ensure no margin around the topnav */
+    padding: 0; /* Ensure no padding around the topnav */
+    top: 0; /* Position at the top */
+  }
+  
+  .topnav #myLinks {
+    display: none;
+  }
+  
+  .topnav a {
+    color: black;
+    padding: 30px 30px;
+    text-decoration: none;
+    font-size: 17px;
+    display: block;
+  }
+  
+  .topnav a.icon {
+    display: block;
+    position: absolute;
+    left: 0; 
+    top: 0;
+  }
+  
+  .topnav a:hover {
+    color: black;
+  }
+  
+  .active {
+    height: 80px;
   }
 }
