@@ -38,12 +38,11 @@
   
   .topnav a {
     color: black;
-    padding: 30px 30px;
+    padding: 27px 30px;
     text-decoration: none;
     font-size: 17px;
     display: block;
   }
-  
   .topnav a.icon {
     display: block;
     position: absolute;
@@ -51,6 +50,16 @@
     top: 0;
   }
   
+.topnav .hamburger-icon {
+  font-size: 25px; /* Adjust this value to make the hamburger icon bigger */
+  transition: transform 0.3s ease;
+}
+.hamburger-icon:hover{
+  transform: scale(1.25);
+}
+.topnav .hamburger-icon.change {
+  content: "\f00d"; /* FontAwesome icon for 'times' (X) */
+}
   .topnav a:hover {
     color: black;
   }
@@ -58,4 +67,5 @@
   .active {
     height: 80px;
   }
+  
 }

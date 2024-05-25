@@ -76,17 +76,19 @@
         <div class="mobile-container">
             <!-- Top Navigation Menu -->
             <div class="topnav">
-                <a href="#home" class="active"></a>
+                <a href="{% url 'index' %}" class="active"></a>
                 <a href="javascript:void(0);" class="icon">
-                    <i class="fa fa-bars"></i>
+                    <label for="menuToggle" class="icon">
+                        <i class="fa fa-bars hamburger-icon"></i>
+                    </label>
                 </a>
-                <div id="myLinks">
-                    <a href="#news">Projects</a>
-                    <a href="#contact">Blog</a>
-                    <a href="#about">Info</a>
+                <div id="myLinks" class="mobileIcons">
+                    <a href="{% url 'projects' %}">Projects</a>
+                    <a href="{% url 'blog' %}">Blog</a>
+                    <a href="{% url 'info' %}">Info</a>
+                    <a href="{% url 'settings' %}">Settings</a>
                 </div>
             </div>
-        </div>
         </div>
     {% block body %}
     {% endblock body %}
