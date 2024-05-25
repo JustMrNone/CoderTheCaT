@@ -23,3 +23,6 @@ nav.navdark {
     left: 50%;
     transform: translate(-50%, -50%);
 }
+.dark-mode .mobileIcons a {
+  background-color: #7a4343 !important; /* Apply dark mode background color to .mobileIcons a */
+}

@@ -37,11 +37,17 @@
   }
   
   .topnav a {
-    color: black;
+    color: #1e272e;
     padding: 27px 30px;
     text-decoration: none;
     font-size: 17px;
     display: block;
+    transition: transform 0.3s ease;
+    font-family: 'Sofia';
+  }
+  .topnav a:hover{
+    transform: scale(1.1);
+
   }
   .topnav a.icon {
     display: block;
@@ -53,19 +59,22 @@
 .topnav .hamburger-icon {
   font-size: 25px; /* Adjust this value to make the hamburger icon bigger */
   transition: transform 0.3s ease;
+  color: #f7f1e3;
+  background-color: none;
 }
 .hamburger-icon:hover{
-  transform: scale(1.25);
-}
-.topnav .hamburger-icon.change {
-  content: "\f00d"; /* FontAwesome icon for 'times' (X) */
+  transform: scale(1.15);
+  color: #1e272e;
 }
   .topnav a:hover {
     color: black;
+    
   }
   
   .active {
     height: 80px;
   }
-  
+.mobileIcons a {
+  background-color: #b33939;
+}
 }
