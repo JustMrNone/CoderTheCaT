@@ -33,6 +33,16 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         });
 
+        // Change background color of .mobileIcons a based on mode
+        const mobileIconsLinks = document.querySelectorAll('.mobileIcons a');
+        mobileIconsLinks.forEach(link => {
+            if (darkModeEnabled) {
+                link.style.backgroundColor = '#7a4343'; // Apply dark mode background color
+            } else {
+                link.style.backgroundColor = '#b33939'; // Apply default background color
+            }
+        });
+
         // Update local storage
         localStorage.setItem("navDarkEnabled", darkModeEnabled && isNavDark);
         localStorage.setItem("darkModeEnabled", darkModeEnabled);

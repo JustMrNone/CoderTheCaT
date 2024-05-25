@@ -162,8 +162,10 @@ body {
   z-index: 1; /* Set a z-index to position the icon behind the menu item */
   transition: transform 0.3s ease;
   transform-origin: top left;
+  color: #f7f1e3;
 }
 .icons:hover {
+  color: #1e272e;
   transform: translate(-50%, -50%) scale(1.1); /* Scale the icon to 1.2 times its original size on hover */
 }
 .menuicon{
@@ -174,9 +176,11 @@ body {
   transform: translate(-50%, -50%);
   transition: transform 0.3s ease;
   transform-origin: top left;
+  color: #f7f1e3;
 }
 .menuicon:hover{
   transform: translate(-50%, -50%) scale(1.1);
+  color: #1e272e;
 }
 .homeicon {
   transition: transform 0.3s ease, text-shadow 0.3s ease; /* Add transition for both transform and text-shadow */

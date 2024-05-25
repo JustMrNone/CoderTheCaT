@@ -26,3 +26,6 @@ nav.navdark {
 .dark-mode .mobileIcons a {
   background-color: #7a4343 !important; /* Apply dark mode background color to .mobileIcons a */
 }
+.dark-mode .mobileIcons a:hover{
+  background-color: #865454 !important; /* Apply dark mode background color to .mobileIcons a:hover */
+}
