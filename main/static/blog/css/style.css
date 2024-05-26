@@ -53,3 +53,95 @@ body.blog {
 .dropdown-item:hover{
     background-color: #5b5b77;
 }
+.index-container {
+    /* Remove absolute positioning */
+    position: relative;
+    margin: 0 auto; /* Center horizontally */
+    top: 100px; /* Reset top */
+    left: 0; /* Reset left */
+    right: 0; /* Reset right */
+
+    /* Responsive width */
+    width: 80%;
+    max-width: 1100px;
+    padding: 18px;
+    color: #1e272e;
+    border-radius: 8px;
+
+    /* Flexbox settings */
+    display: flex;
+    flex-direction: column; /* Stack items vertically for smaller screens */
+    align-items: center; /* Center items horizontally */
+
+    /* Add space between elements */
+    gap: 20px;
+
+    /* Add media query for larger screens */
+    @media (min-width: 768px) {
+        flex-direction: row; /* Stack items horizontally for larger screens */
+        justify-content: center; /* Center container horizontally */
+    }
+}
+.index-image img {
+    width: 200px; /* Set width for square image */
+    height: 200px; /* Set height for square image */
+    object-fit: cover; /* Ensure the image covers the area without distortion */
+    border-radius: 8px; /* Optional: Add border radius to the image */
+    margin-bottom: 65px;
+}
+
+.index-content-wrapper {
+    flex: 1; /* Allow the content to take up remaining space */
+    display: flex;
+    flex-direction: column;
+}
+
+.index-title {
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.index-content {
+    font-size: 1em;
+    line-height: 1.5;
+    text-align: justify;
+}
+
+.index-read-more {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #fff;
+    color: #fa6e6e;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    align-self: flex-end; /* Move read more button to the right */
+}
+
+.index-read-more:hover {
+    background-color: #f5f5f5;
+}
+
+@media (max-width: 600px) {
+    .index-container {
+        flex-direction: column; /* Stack items vertically on small screens */
+        align-items: center; /* Center align items */
+    }
+
+    .index-title {
+        font-size: 1.5em;
+    }
+
+    .index-content {
+        font-size: 0.9em;
+    }
+
+    .index-read-more {
+        align-self: center; /* Center the read more button */
+    }
+
+    .index-image img {
+        width: 100%; /* Make image responsive */
+        height: auto; /* Maintain aspect ratio */
+    }
+}

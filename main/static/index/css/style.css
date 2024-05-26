@@ -5,14 +5,11 @@
     width: 80%;
     max-width: 800px;
     padding: 20px;
-    background-color: #c8d6e5;
     color: #1e272e;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .index-title {
-    font-size: 2em;
     margin-bottom: 10px;
     text-align: left;
 }
