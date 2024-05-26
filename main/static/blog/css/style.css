@@ -24,7 +24,6 @@ body.blog {
         margin-top: 25px !important;
     }
 }
-
 /* Ensure navbar links are not underlined */
 .navbar a {
     text-decoration: none;
@@ -33,4 +32,24 @@ body.blog {
 /* Dropdown menu items should not be underlined */
 .dropdown-menu a {
     text-decoration: none;
+}
+.custom-search-container {
+    width: 100%; /* Adjust width as needed */
+    border-radius: 10px; /* Optional: Add border radius for rounded corners */
+}
+
+.custom-search-input {
+    height: 45px; /* Adjust height as needed */
+}
+.custom-search-input:focus {
+    border-color: #60a3bc; /* Change border color when input is in focus */
+    box-shadow: 0 0 0 0.2rem rgba(96, 163, 188, 0.25); /* Optional: Add a subtle box shadow */
+}
+#searchOption:hover{
+    background-color: #40407a;
+    border-color: #aaa69d;
+    color: #f7f1e3;
+}
+.dropdown-item:hover{
+    background-color: #5b5b77;
 }
