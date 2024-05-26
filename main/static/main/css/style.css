@@ -247,3 +247,6 @@ body {
 .playicon:hover{
   transform: scale(1.25);
 }
+a {
+  text-decoration: none !important;
+}

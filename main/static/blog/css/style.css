@@ -1,0 +1,36 @@
+/* Apply to the blog page only */
+body.blog {
+    text-decoration: none !important;
+}
+
+/* Custom margin to move the container down */
+.custom-margin {
+    margin-top: 105px !important;
+}
+
+/* Ensure search button has custom styling */
+.searchbutton {
+    background-color: #3c6382;
+    border-color: #3c6382;
+}
+.searchbutton:hover {
+    background-color: #60a3bc;
+    border-color: #60a3bc;
+}
+
+/* Responsive margin adjustment */
+@media screen and (max-width: 768px) {
+    .custom-margin {
+        margin-top: 25px !important;
+    }
+}
+
+/* Ensure navbar links are not underlined */
+.navbar a {
+    text-decoration: none;
+}
+
+/* Dropdown menu items should not be underlined */
+.dropdown-menu a {
+    text-decoration: none;
+}
