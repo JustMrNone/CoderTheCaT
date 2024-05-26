@@ -103,11 +103,27 @@ body.blog {
 }
 
 .index-content {
-    font-size: 1em;
+    font-size: 16px;
     line-height: 1.5;
     text-align: justify;
-}
 
+}
+/* Style for the link */
+.index-title a {
+    color:#3498db; /* Custom color */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s; /* Smooth color transition for hover */
+}
+.index-title a:hover {
+    color: #227093; /* Custom hover color */
+    text-decoration: underline; /* Optionally add underline on hover */
+}
+.index-title a:visited {
+    color: #9b59b6; /* Custom color for visited links */
+}
+.index-title a:visited:hover{
+    color: #6a3c7c;
+}
 .index-read-more {
     margin-top: 20px;
     padding: 10px 20px;
