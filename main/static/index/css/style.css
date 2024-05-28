@@ -1,16 +1,31 @@
-html {
+html, body {
+    height: 100%;
+    margin: 0;
     font-size: 16px; /* Base font size for rem calculations */
 }
 
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.page-content {
+    flex: 1 0 auto;
+}
+
 .index-container {
-    position: relative;
-    top: 12.5rem; /* 200px / 16 */
+    margin: 12.5rem auto 2rem; /* Adjust margins to control spacing */
     left: 5%;
     width: 90%;
     max-width: 50rem; /* 800px / 16 */
     padding: 1.25rem; /* 20px / 16 */
     color: #1e272e;
     border-radius: 0.5rem; /* 8px / 16 */
+}
+
+.container1 {
+    margin-top: 15rem; /* Adjust margin-top to control spacing */
 }
 
 .index-title {
@@ -22,20 +37,26 @@ html {
     font-size: 2rem; /* 32px / 16 */
 }
 
+.index-title h1 a {
+    transition: opacity 0.3s ease;
+}
+
+.index-title h1 a:hover {
+    opacity: 0.8;
+}
+
 .index-content {
     font-size: 1rem; /* 16px / 16 */
     line-height: 1.5;
-    text-align: center;
     text-align: justify;
-
 }
 
 .index-read-more {
     display: inline-block;
     margin-top: 1.25rem; /* 20px / 16 */
     padding: 0.625rem 1.25rem; /* 10px 20px / 16 */
-    background-color: #fff;
-    color: #fa6e6e;
+    background-color: #CAD3C8;
+    color: #2f3640;
     text-decoration: none;
     border-radius: 0.25rem; /* 4px / 16 */
     font-weight: bold;
@@ -43,15 +64,13 @@ html {
 }
 
 .index-read-more:hover {
-    background-color: #f5f5f5;
+    background-color: #d1ccc0;
 }
 
 @media (max-width: 48rem) { /* 600px / 16 */
-
     .index-title h1 {
         font-size: 1.5rem; /* 24px / 16 */
         text-align: center;
-    
     }
 }
 

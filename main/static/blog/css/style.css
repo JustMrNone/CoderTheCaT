@@ -1,6 +1,7 @@
-/* Apply to the blog page only */
 body.blog {
-    text-decoration: none !important;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 /* Custom margin to move the container down */
@@ -24,6 +25,7 @@ body.blog {
         margin-top: 25px !important;
     }
 }
+
 /* Ensure navbar links are not underlined */
 .navbar a {
     text-decoration: none;
@@ -33,6 +35,7 @@ body.blog {
 .dropdown-menu a {
     text-decoration: none;
 }
+
 .custom-search-container {
     width: 100%; /* Adjust width as needed */
     border-radius: 10px; /* Optional: Add border radius for rounded corners */
@@ -53,45 +56,36 @@ body.blog {
 .dropdown-item:hover{
     background-color: #5b5b77;
 }
+/* Adjustments for index container */
 .index-container {
-    /* Remove absolute positioning */
-    position: relative;
     margin: 0 auto; /* Center horizontally */
-    top: 100px; /* Reset top */
-    left: 0; /* Reset left */
-    right: 0; /* Reset right */
-
-    /* Responsive width */
-    width: 80%;
+    margin-top: 20px; /* Add top margin */
+    width: 80%; /* Responsive width */
     max-width: 1100px;
     padding: 18px;
     color: #1e272e;
     border-radius: 8px;
-
-    /* Flexbox settings */
     display: flex;
-    flex-direction: column; /* Stack items vertically for smaller screens */
-    align-items: center; /* Center items horizontally */
-
-    /* Add space between elements */
+    flex-direction: column;
+    align-items: center;
     gap: 20px;
 
-    /* Add media query for larger screens */
     @media (min-width: 768px) {
-        flex-direction: row; /* Stack items horizontally for larger screens */
-        justify-content: center; /* Center container horizontally */
+        flex-direction: row;
+        justify-content: center;
     }
 }
+
 .index-image img {
-    width: 200px; /* Set width for square image */
-    height: 200px; /* Set height for square image */
-    object-fit: cover; /* Ensure the image covers the area without distortion */
-    border-radius: 8px; /* Optional: Add border radius to the image */
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
     margin-bottom: 65px;
 }
 
 .index-content-wrapper {
-    flex: 1; /* Allow the content to take up remaining space */
+    flex: 1;
     display: flex;
     flex-direction: column;
 }
@@ -106,24 +100,27 @@ body.blog {
     font-size: 16px;
     line-height: 1.5;
     text-align: justify;
+}
 
-}
-/* Style for the link */
 .index-title a {
-    color:#3498db; /* Custom color */
-    text-decoration: none; /* Remove underline */
-    transition: color 0.3s; /* Smooth color transition for hover */
+    color: #3498db;
+    text-decoration: none;
+    transition: color 0.3s;
 }
+
 .index-title a:hover {
-    color: #227093; /* Custom hover color */
-    text-decoration: underline; /* Optionally add underline on hover */
+    color: #227093;
+    text-decoration: underline;
 }
+
 .index-title a:visited {
-    color: #9b59b6; /* Custom color for visited links */
+    color: #9b59b6;
 }
-.index-title a:visited:hover{
+
+.index-title a:visited:hover {
     color: #6a3c7c;
 }
+
 .index-read-more {
     margin-top: 20px;
     padding: 10px 20px;
@@ -132,7 +129,7 @@ body.blog {
     text-decoration: none;
     border-radius: 4px;
     font-weight: bold;
-    align-self: flex-end; /* Move read more button to the right */
+    align-self: flex-end;
 }
 
 .index-read-more:hover {
@@ -141,8 +138,8 @@ body.blog {
 
 @media (max-width: 600px) {
     .index-container {
-        flex-direction: column; /* Stack items vertically on small screens */
-        align-items: center; /* Center align items */
+        flex-direction: column;
+        align-items: center;
     }
 
     .index-title {
@@ -154,11 +151,11 @@ body.blog {
     }
 
     .index-read-more {
-        align-self: center; /* Center the read more button */
+        align-self: center;
     }
 
     .index-image img {
-        width: 100%; /* Make image responsive */
-        height: auto; /* Maintain aspect ratio */
+        width: 100%;
+        height: auto;
     }
 }

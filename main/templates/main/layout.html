@@ -23,96 +23,103 @@
     </title>
 </head>
 <body>
-    <header>
-        {% block header %}
-        {% endblock header %}
+    
         <header>
-            <a href="{% url 'settings' %}">
-                <i class="fa fa-cog settingsicon" aria-hidden="true"></i>
-            </a>
-        
-            <a href="">
-                <i class="fab fa-youtube playicon" title="Subscibe to my youtube channel"></i>
-            </a>
-        
-            <a href="">
-                <i class="fab fa-github githubicon" aria-hidden="true"></i>
-            </a>
-        </header>
-        
-        <nav class="nav">
-            <input id="menu" type="checkbox">
-            <label for="menu" title="Menu"><i class="fa fa-bars menuicon" aria-hidden="true"></i></label>
-            <ul class="menu">
-                <li>
-                    <a href="{% url 'projects' %}">
-                        <span class="navitem">Projects</span>
-                        <i class="fa fa-archive icons" aria-hidden="true"></i>
-                    </a>
-                </li>
-                <li>
-                    <a href="{% url 'blog' %}">
-                        <span class="navitem">Blog</span>
-                        <i class="fa fa-file-text icons" aria-hidden="true"></i>
-                    </a>
-                </li>
-                <li>
-                    <a href="{% url 'info' %}">
-                        <span class="navitem">Info</span>
-                        <i class="fa fa-question-circle icons" aria-hidden="true"></i>
-                    </a>
-                </li>
-            </ul>
-        
-            <a href="{% url 'index' %}">
-                <img src="{% static 'main/img/CatHat.png' %}" alt="Cat with Hat" class="imageicon" title="Home">
-            </a>
-        
-            <a href="{% url 'index' %}">
-                <span class="top-right-text homeicon"> CoderTheCaT </span>
-            </a>
-        </nav>
-
-        <div class="mobile-container">
-            <!-- Top Navigation Menu -->
-            <div class="topnav">
-              <div class="active"></div>
-              <a href="javascript:void(0);" class="icon">
-                <i class="fa fa-bars hamburger-icon"></i>
-              </a>
-              <div id="myLinks" class="mobileIcons">
-                <a href="{% url 'index' %}">
-                    <i class="fa-solid fa-house micons" aria-hidden="true"></i>
-                    <span class="monavitem">Home</span>
-                  </a>
-                <a href="{% url 'projects' %}">
-                  <i class="fa fa-archive micons" aria-hidden="true"></i>
-                  <span class="monavitem">Projects</span>
-                </a>
-                <a href="{% url 'blog' %}">
-                  <i class="fa fa-file-text micons" aria-hidden="true"></i>
-                  <span class="monavitem">Blog</span>
-                </a>
-                <a href="{% url 'info' %}">
-                  <i class="fa fa-question-circle micons" aria-hidden="true"></i>
-                  <span class="monavitem">Info</span>
-                </a>
+            {% block header %}
+            {% endblock header %}
+            
                 <a href="{% url 'settings' %}">
-                  <i class="fa fa-cog micons" aria-hidden="true"></i>
-                  <span class="monavitem">Settings</span>
+                    <i class="fa fa-cog settingsicon" aria-hidden="true"></i>
                 </a>
-              </div>
+            
+                <a href="">
+                    <i class="fab fa-youtube playicon" title="Subscibe to my youtube channel"></i>
+                </a>
+            
+                <a href="https://github.com/JustMrNone">
+                    <i class="fab fa-github githubicon" aria-hidden="true"></i>
+                </a>
+        </header>
+            
+            <nav class="nav">
+                <input id="menu" type="checkbox">
+                <label for="menu" title="Menu"><i class="fa fa-bars menuicon" aria-hidden="true"></i></label>
+                <ul class="menu">
+                    <li>
+                        <a href="{% url 'projects' %}">
+                            <span class="navitem">Projects</span>
+                            <i class="fa fa-archive icons" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{% url 'blog' %}">
+                            <span class="navitem">Blog</span>
+                            <i class="fa fa-file-text icons" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{% url 'info' %}">
+                            <span class="navitem">Info</span>
+                            <i class="fa fa-question-circle icons" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                </ul>
+            
+                <a href="{% url 'index' %}">
+                    <img src="{% static 'main/img/CatHat.png' %}" alt="Cat with Hat" class="imageicon" title="Home">
+                </a>
+            
+                <a href="{% url 'index' %}">
+                    <span class="top-right-text homeicon"> CoderTheCaT </span>
+                </a>
+            </nav>
+        <nav>
+            <div class="mobile-container">
+                <!-- Top Navigation Menu -->
+                <div class="topnav">
+                <div class="active"></div>
+                <a href="javascript:void(0);" class="icon">
+                    <i class="fa fa-bars hamburger-icon"></i>
+                </a>
+                <div id="myLinks" class="mobileIcons">
+                    <a href="{% url 'index' %}">
+                        <i class="fa-solid fa-house micons" aria-hidden="true"></i>
+                        <span class="monavitem">Home</span>
+                    </a>
+                    <a href="{% url 'projects' %}">
+                    <i class="fa fa-archive micons" aria-hidden="true"></i>
+                    <span class="monavitem">Projects</span>
+                    </a>
+                    <a href="{% url 'blog' %}">
+                    <i class="fa fa-file-text micons" aria-hidden="true"></i>
+                    <span class="monavitem">Blog</span>
+                    </a>
+                    <a href="{% url 'info' %}">
+                    <i class="fa fa-question-circle micons" aria-hidden="true"></i>
+                    <span class="monavitem">Info</span>
+                    </a>
+                    <a href="{% url 'settings' %}">
+                    <i class="fa fa-cog micons" aria-hidden="true"></i>
+                    <span class="monavitem">Settings</span>
+                    </a>
+                    </div>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
-    {% block body %}
-    {% endblock body %}
+        </nav>
+        <main class="page-content">
+            {% block body %}
+            
+            {% endblock body %}
+        </main>
 
+        <footer class="page-footer">
+            this is footer
+            {% block footer %}
+            {% endblock footer %}
+        </footer>
 </body>
 
-<footer>
-    {% block footer %}
-    {% endblock footer %}
-</footer>
+
 
 </html>
