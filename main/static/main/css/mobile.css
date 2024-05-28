@@ -109,7 +109,6 @@
   }
   .micons2:hover {
     transform: scale(1.4);
-    color: #1b1e20;
   }
   .micons3 {
     transition: transform 0.4s ease;
@@ -120,7 +119,6 @@
   }
   .micons3:hover {
     transform: scale(1.4);
-    color: #1b1e20;
   }
   .monavitem {
     color: #f7f1e3;

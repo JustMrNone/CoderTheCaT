@@ -66,7 +66,12 @@ body {
 .index-read-more:hover {
     background-color: #d1ccc0;
 }
-
+.divider {
+    width: 100%; /* Adjust width as needed */
+    height: 1px; /* Set the height of the line */
+    background-color: #ccc; /* Set the color of the line */
+    margin: 20px auto; /* Center the line horizontally and add margin */
+}
 @media (max-width: 48rem) { /* 600px / 16 */
     .index-title h1 {
         font-size: 1.5rem; /* 24px / 16 */
