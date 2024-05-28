@@ -18,7 +18,7 @@ a {
   text-decoration: none;
 }
 body {
-  font-family: "Inter", sans-serif;
+  font-family: "Roboto", sans-serif !important;
   text-align: center;
   background-color: #f6f2ef;
   color: white;
@@ -269,14 +269,10 @@ body {
   flex-grow: 1;
 }
 .page-footer {
-  background: #aaa69d;
+  background: #5c5c5c;
   color: #f7f1e3; 
   padding: 20px;
   margin-top: auto;
   text-align: center;
   opacity: 98%;
-}
-html, body {
-  height: 100%;
-  margin: 0;
 }

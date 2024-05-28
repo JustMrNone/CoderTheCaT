@@ -81,26 +81,47 @@
     z-index: 9999; /* ensures it is on top of most other elements */
     display: flex;
     align-items: center;
+    justify-content: center;
     padding: 10px;
   }
   
-  .mobileIcons a:hover {
+  .mobileIcons a:not(.lastit):hover {
     background-color: #b94646 !important;
     transform: scale(1.1);
   }
-  
   .micons {
     transition: transform 0.4s ease;
     color: #f7f1e3;
     margin-right: 10px; /* Add space between icon and text */
     margin-left: 25px;
   }
-  
   .micons:hover {
     transform: scale(1.3);
     color: #1b1e20;
   }
-  
+  .micons2 {
+    transition: transform 0.4s ease;
+    font-size: 25px;
+    color: #f7f1e3;
+    margin-right: 10px; /* Add space between icon and text */
+    margin-left: 10px;
+    text-align: center;
+  }
+  .micons2:hover {
+    transform: scale(1.4);
+    color: #1b1e20;
+  }
+  .micons3 {
+    transition: transform 0.4s ease;
+    font-size: 25px;
+    color: #f7f1e3;
+    margin-right: 10px; /* Add space between icon and text */
+    margin-left: 75px;
+  }
+  .micons3:hover {
+    transform: scale(1.4);
+    color: #1b1e20;
+  }
   .monavitem {
     color: #f7f1e3;
     margin-left: auto; /* Align text to the right */

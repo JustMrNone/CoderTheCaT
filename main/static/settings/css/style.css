@@ -1,3 +1,6 @@
+body{
+  min-height: 110vh;
+}
 .switch {
     position: relative;
     display: inline-block;
@@ -62,7 +65,11 @@
 
   .txtdrk{
     color: #3d3d3d;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: "Roboto", sans-serif;
     font-weight: bold;
     font-size: 20px;
+  }
+
+  .spacer {
+    height: 500px; /* Adjust this value as needed to extend beyond the viewport */
   }

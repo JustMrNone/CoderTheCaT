@@ -1,9 +1,8 @@
-body.blog {
+body{
     display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
-
 /* Custom margin to move the container down */
 .custom-margin {
     margin-top: 105px !important;
