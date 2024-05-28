@@ -289,7 +289,15 @@ body {
   /* Additional styles */
   margin-left: 0; /* Reset margin-left if it was set elsewhere */
   transition: transform 0.3s ease;
+  color: #4b4b4b; 
   font-size: 25px;
+}
+.arrowup a {
+  color: inherit; /* Ensure link inherits color from .arrowup */
+  text-decoration: none; /* Remove underline from link */
+}
+.arrowup a:visited {
+  color: inherit; /* Make sure visited link doesn't change color */
 }
 .arrowup:hover{
   transform: scale(1.3);
