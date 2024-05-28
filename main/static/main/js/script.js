@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const isNavDark = localStorage.getItem("navDarkEnabled") === "true";
     const navElement = document.querySelector('.nav');
     const elementsToColor = document.querySelectorAll('p, h1, h2, h3, h4, h5, h6');
+    const pageFooter = document.querySelector('.page-footer');
 
     // Function to store original text colors of paragraphs and headings
     function storeOriginalColors() {
@@ -42,6 +43,13 @@ document.addEventListener("DOMContentLoaded", function() {
                 link.style.backgroundColor = '#b33939'; // Apply default background color
             }
         });
+
+        // Change background color of page-footer based on mode
+        if (darkModeEnabled) {
+            pageFooter.classList.add('dark-mode');
+        } else {
+            pageFooter.classList.remove('dark-mode');
+        }
 
         // Update local storage
         localStorage.setItem("navDarkEnabled", darkModeEnabled && isNavDark);

@@ -269,10 +269,28 @@ body {
   flex-grow: 1;
 }
 .page-footer {
-  background: #5c5c5c;
-  color: #f7f1e3; 
+  background: #d1ccc0;
+  color: #4b4b4b; 
   padding: 20px;
   margin-top: auto;
   text-align: center;
   opacity: 98%;
+}
+.arrowcontainer {
+  position: relative; /* Ensure the container is positioned relative */
+  height: 6.5vh; /* Optional: Set the height of the container */
+}
+
+/* Arrow up element positioned in the bottom left corner */
+.arrowup {
+  position: absolute;
+  bottom: 20px; /* Distance from the bottom of the container */
+  left: 20px; /* Distance from the left side of the container */
+  /* Additional styles */
+  margin-left: 0; /* Reset margin-left if it was set elsewhere */
+  transition: transform 0.3s ease;
+  font-size: 25px;
+}
+.arrowup:hover{
+  transform: scale(1.3);
 }

@@ -1,3 +1,4 @@
+/*Navigation*/
 nav.navdark {
   position: absolute;
   top: 0%;
@@ -13,6 +14,7 @@ nav.navdark {
   overflow: hidden;
   
 }
+/*BackGround*/
 .dark-mode {
     background-color: #333333 !important; /* Dark mode background color */
 
@@ -23,9 +25,19 @@ nav.navdark {
     left: 50%;
     transform: translate(-50%, -50%);
 }
+/*Mobile*/
+
 .dark-mode .mobileIcons a {
   background-color: #7a4343 !important; /* Apply dark mode background color to .mobileIcons a */
 }
 .dark-mode .mobileIcons a:hover{
   background-color: #865454 !important; /* Apply dark mode background color to .mobileIcons a:hover */
+}
+/*Footer*/
+.dark-mode .arrowup {
+  color: #f7f1e3; /* Color in dark mode */
+}
+
+.dark-mode .page-footer {
+  background-color: #84817a !important; /* Dark mode background color for footer */
 }
