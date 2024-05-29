@@ -106,8 +106,8 @@ body {
 }
 
 .palette-card {
-    background: white;
-    border: 1px solid #ddd;
+    background: #f7f1e3;
+    border: 1px solid #dfe4ea;
     border-radius: 10px;
     margin-left: 30px;
     margin-right: 30px;
@@ -139,14 +139,14 @@ body {
     display: inline-block;
     padding: 10px 20px;
     margin-top: 10px;
-    background: #0073e6;
+    background: #CAD3C8;
     color: #1e272e;
     border-radius: 5px;
     text-decoration: none;
 }
 
 .palette-button:hover {
-    background: #005bb5;
+    background: #d1ccc0;
 }
 
 .palette-footer {
@@ -164,7 +164,7 @@ body {
 }
 
 .footer-description {
-    color: #666;
+    color: 1e272e;
 }
 
 @media (max-width: 768px) {

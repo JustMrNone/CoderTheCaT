@@ -41,3 +41,8 @@ nav.navdark {
 .dark-mode .page-footer {
   background-color: #84817a !important; /* Dark mode background color for footer */
 }
+
+.dark-mode .palette-card{
+  background-color: #57606f !important;
+  border: 1px solid #2f3542;
+}

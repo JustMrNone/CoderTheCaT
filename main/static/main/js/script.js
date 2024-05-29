@@ -5,6 +5,8 @@ document.addEventListener("DOMContentLoaded", function() {
     const navElement = document.querySelector('.nav');
     const elementsToColor = document.querySelectorAll('p, h1, h2, h3, h4, h5, h6');
     const pageFooter = document.querySelector('.page-footer');
+    const mobileIconsLinks = document.querySelectorAll('.mobileIcons a');
+    const indexCards = document.querySelectorAll('.palette-card'); // Use querySelectorAll to select all cards
 
     // Function to store original text colors of paragraphs and headings
     function storeOriginalColors() {
@@ -35,7 +37,6 @@ document.addEventListener("DOMContentLoaded", function() {
         });
 
         // Change background color of .mobileIcons a based on mode
-        const mobileIconsLinks = document.querySelectorAll('.mobileIcons a');
         mobileIconsLinks.forEach(link => {
             if (darkModeEnabled) {
                 link.style.backgroundColor = '#7a4343'; // Apply dark mode background color
@@ -50,6 +51,15 @@ document.addEventListener("DOMContentLoaded", function() {
         } else {
             pageFooter.classList.remove('dark-mode');
         }
+
+        // Change background color of .palette-card based on mode
+        indexCards.forEach(card => {
+            if (darkModeEnabled) {
+                card.classList.add('dark-mode');
+            } else {
+                card.classList.remove('dark-mode');
+            }
+        });
 
         // Update local storage
         localStorage.setItem("navDarkEnabled", darkModeEnabled && isNavDark);
