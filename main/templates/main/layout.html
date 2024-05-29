@@ -27,12 +27,20 @@
         <header>
             {% block header %}
             {% endblock header %}
+
+            <div class="NavToggle">
+                <label class="switch">
+                    <input type="checkbox" id="darkModeToggle">
+                    <span class="slider round"></span>
+                </label>
+            </div>
+
             
                 <a href="{% url 'settings' %}">
                     <i class="fa fa-cog settingsicon" aria-hidden="true"></i>
                 </a>
             
-                <a href="">
+                <a href="https://youtube.com">
                     <i class="fab fa-youtube playicon" title="Subscibe to my youtube channel"></i>
                 </a>
             
@@ -102,11 +110,24 @@
                     <i class="fa fa-cog micons" aria-hidden="true"></i>
                     <span class="monavitem">Settings</span>
                     </a>
-                    <a href="{% url 'settings' %}" class="lastit">
-                        <i class="fab fa-github micons2" aria-hidden="true"></i>
-                        <i class="fab fa-youtube micons3" title="Subscibe to my youtube channel"></i>
-                        
-                        </a>
+
+
+                    
+                        <div class="link-container">
+                            <a href="https://github.com/JustMrNone" class="icon-container lastit">
+                              <div class="icon-wrapper">
+                                <i class="fab fa-github micons2" aria-hidden="true"></i>
+                              </div>
+                            </a>
+                            <a href="https://youtube.com" class="icon-container lastit">
+                              <div class="icon-wrapper">
+                                <i class="fab fa-youtube micons3" title="Subscribe to my YouTube channel"></i>
+                              </div>
+                            </a>
+                          </div>
+                       
+
+
                     </div>
                     </div>
                 </div>

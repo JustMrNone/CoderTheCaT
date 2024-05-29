@@ -7,6 +7,8 @@ document.addEventListener("DOMContentLoaded", function() {
     const pageFooter = document.querySelector('.page-footer');
     const mobileIconsLinks = document.querySelectorAll('.mobileIcons a');
     const indexCards = document.querySelectorAll('.palette-card'); // Use querySelectorAll to select all cards
+    const darkModeToggleNav = document.getElementById("darkModeToggleNav");
+    const isDarkModeNav = localStorage.getItem("darkModeEnabledNav") === "true";
 
     // Function to store original text colors of paragraphs and headings
     function storeOriginalColors() {
@@ -65,7 +67,7 @@ document.addEventListener("DOMContentLoaded", function() {
         localStorage.setItem("navDarkEnabled", darkModeEnabled && isNavDark);
         localStorage.setItem("darkModeEnabled", darkModeEnabled);
     }
-
+    
     // Apply stored preferences
     if (isDarkMode) {
         applyDarkMode();

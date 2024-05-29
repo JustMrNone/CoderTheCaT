@@ -14,17 +14,43 @@ nav.navdark {
   overflow: hidden;
   
 }
+.containerse {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.NavToggle {
+  position: absolute;
+  top: 1px; /* Adjust as needed */
+  right: 340px; /* Adjust as needed */
+  margin-top: 15px;
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+}
+@media (max-width: 768px) {
+  .NavToggle {
+    position: absolute!important; /* Ensure it takes precedence */
+    top: 1px !important; /* Adjust the top position */
+    right: 20px !important; /* Position at the right edge */
+    margin-top: 15px; /* Optional, adjust or remove as needed */
+    z-index: 10000 !important; /* Ensure it is above other elements */
+    display: flex !important; /* Ensure flexbox is applied */
+    align-items: center !important; /* Center children vertically */
+  }
+}
+@media (max-width: 830px){
+  .NavToggle {
+    display: none;
+  }
+}
 /*BackGround*/
 .dark-mode {
     background-color: #333333 !important; /* Dark mode background color */
 
   }
-  .containerse {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
+
 /*Mobile*/
 
 .dark-mode .mobileIcons a {
