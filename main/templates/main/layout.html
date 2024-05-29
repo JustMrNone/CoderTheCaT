@@ -28,8 +28,9 @@
             {% block header %}
             {% endblock header %}
 
+
             <div class="NavToggle">
-                <label class="switch">
+                <label class="switch" title="Dark Mode">
                     <input type="checkbox" id="darkModeToggle">
                     <span class="slider round"></span>
                 </label>
@@ -47,7 +48,10 @@
                 <a href="https://github.com/JustMrNone">
                     <i class="fab fa-github githubicon" aria-hidden="true"></i>
                 </a>
+
+
         </header>
+
             
             <nav class="nav">
                 <input id="menu" type="checkbox">
@@ -82,6 +86,9 @@
                 </a>
             </nav>
         <nav>
+
+
+
             <div class="mobile-container">
                 <!-- Top Navigation Menu -->
                 <div class="topnav">
@@ -132,12 +139,18 @@
                     </div>
                 </div>
             </div>
+
         </nav>
+
+
+
         <main class="page-content">
             {% block body %}
             
             {% endblock body %}
         </main>
+
+
 
         <footer class="page-footer">
             <div class="arrowcontainer">
@@ -151,8 +164,8 @@
             {% block footer %}
             {% endblock footer %}
         </footer>
+
+
 </body>
-
-
 
 </html>
