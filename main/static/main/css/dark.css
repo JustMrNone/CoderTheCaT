@@ -8,7 +8,7 @@ nav.navdark {
   width: 100%; /* Occupy the full width of the parent container */
   max-width: 100%; /* Limit the maximum width to the parent container width */
   margin: 0;
-  background-color: #7a4343;
+  background-color: #7a4343; /*apply Darkboy Red
   overflow-x: hidden; /* Prevent horizontal overflow */
   height: 80px;
   overflow: hidden;
@@ -69,6 +69,11 @@ nav.navdark {
 }
 
 .dark-mode .palette-card{
-  background-color: #57606f !important;
-  border: 1px solid #2f3542;
+  background-color: #4b4b4b !important;
+  border: 1px solid #3d3d3d;
+}
+
+.dark-mode .dev-tools-item{
+  background-color: #4b4b4b !important;
+  border: 1px solid #3d3d3d;
 }

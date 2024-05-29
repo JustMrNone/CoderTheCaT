@@ -6,9 +6,9 @@ document.addEventListener("DOMContentLoaded", function() {
     const elementsToColor = document.querySelectorAll('p, h1, h2, h3, h4, h5, h6');
     const pageFooter = document.querySelector('.page-footer');
     const mobileIconsLinks = document.querySelectorAll('.mobileIcons a');
+    const Devtools = document.querySelector(".dev-tools-item")
     const indexCards = document.querySelectorAll('.palette-card'); // Use querySelectorAll to select all cards
-    const darkModeToggleNav = document.getElementById("darkModeToggleNav");
-    const isDarkModeNav = localStorage.getItem("darkModeEnabledNav") === "true";
+
 
     // Function to store original text colors of paragraphs and headings
     function storeOriginalColors() {
@@ -56,6 +56,13 @@ document.addEventListener("DOMContentLoaded", function() {
 
         // Change background color of .palette-card based on mode
         indexCards.forEach(card => {
+            if (darkModeEnabled) {
+                card.classList.add('dark-mode');
+            } else {
+                card.classList.remove('dark-mode');
+            }
+        });
+        Devtools.forEach(card => {
             if (darkModeEnabled) {
                 card.classList.add('dark-mode');
             } else {
