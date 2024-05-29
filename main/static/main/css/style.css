@@ -1,4 +1,7 @@
 /*navbar stylings */
+html {
+  scroll-behavior: smooth;
+}
 .navbartxt{
     color: #21232a;
     right: 10px;

@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const mobileIconsLinks = document.querySelectorAll('.mobileIcons a');
     const devToolsItems = document.querySelectorAll(".dev-tools-item");
     const indexCards = document.querySelectorAll('.palette-card');
+    const scrollToTopLink = document.getElementById("scrollToTop");
     
     // Select images
     const lightModeImage = document.getElementById('lightModeImage');
@@ -102,4 +103,12 @@ document.addEventListener("DOMContentLoaded", function() {
         document.body.classList.toggle("dark-mode");
         applyDarkMode();
     });
+    scrollToTopLink.addEventListener("click", function(event) {
+        event.preventDefault();
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    });
+
 });
