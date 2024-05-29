@@ -97,6 +97,11 @@ body {
     color: #1e272e;
     margin-top: 150px;
 }
+@media only screen and (max-width: 768px){
+    .palette-title {
+        margin-top: 75px;
+    }
+}
 .palette-container {
     display: flex;
     flex-wrap: wrap;
