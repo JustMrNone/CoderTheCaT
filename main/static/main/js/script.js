@@ -6,9 +6,12 @@ document.addEventListener("DOMContentLoaded", function() {
     const elementsToColor = document.querySelectorAll('p, h1, h2, h3, h4, h5, h6');
     const pageFooter = document.querySelector('.page-footer');
     const mobileIconsLinks = document.querySelectorAll('.mobileIcons a');
-    const Devtools = document.querySelector(".dev-tools-item")
-    const indexCards = document.querySelectorAll('.palette-card'); // Use querySelectorAll to select all cards
-
+    const devToolsItems = document.querySelectorAll(".dev-tools-item");
+    const indexCards = document.querySelectorAll('.palette-card');
+    
+    // Select images
+    const lightModeImage = document.getElementById('lightModeImage');
+    const darkModeImage = document.getElementById('darkModeImage');
 
     // Function to store original text colors of paragraphs and headings
     function storeOriginalColors() {
@@ -19,7 +22,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Function to apply dark mode and navdark mode
     function applyDarkMode() {
-        document.body.classList.toggle("dark-mode");
         const darkModeEnabled = document.body.classList.contains("dark-mode");
 
         // Always add navdark class in dark mode
@@ -62,13 +64,23 @@ document.addEventListener("DOMContentLoaded", function() {
                 card.classList.remove('dark-mode');
             }
         });
-        Devtools.forEach(card => {
+
+        devToolsItems.forEach(item => {
             if (darkModeEnabled) {
-                card.classList.add('dark-mode');
+                item.classList.add('dark-mode');
             } else {
-                card.classList.remove('dark-mode');
+                item.classList.remove('dark-mode');
             }
         });
+
+        // Switch images
+        if (darkModeEnabled) {
+            lightModeImage.style.display = 'none';
+            darkModeImage.style.display = 'block';
+        } else {
+            lightModeImage.style.display = 'block';
+            darkModeImage.style.display = 'none';
+        }
 
         // Update local storage
         localStorage.setItem("navDarkEnabled", darkModeEnabled && isNavDark);
@@ -77,15 +89,17 @@ document.addEventListener("DOMContentLoaded", function() {
     
     // Apply stored preferences
     if (isDarkMode) {
-        applyDarkMode();
+        document.body.classList.add("dark-mode"); // Ensure the body has dark-mode class
         darkModeToggle.checked = true; // Set the checkbox to checked
     }
+    applyDarkMode(); // Always call applyDarkMode to handle switching logic
 
     // Store original colors initially
     storeOriginalColors();
 
     // Event listener for dark mode toggle
     darkModeToggle.addEventListener("click", function() {
+        document.body.classList.toggle("dark-mode");
         applyDarkMode();
     });
 });

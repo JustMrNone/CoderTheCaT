@@ -78,9 +78,12 @@
                 </ul>
             
                 <a href="{% url 'index' %}">
-                    <img src="{% static 'main/img/CatHat.png' %}" alt="Cat with Hat" class="imageicon" title="Home">
+                    <img id="lightModeImage" src="{% static 'main/img/CatHat.png' %}" alt="Cat with Hat" class="imageicon" title="Home">
                 </a>
-            
+                <a href="{% url 'index' %}">
+                    <img id="darkModeImage" src="{% static 'main/img/DarkHat.png' %}" alt="Cat with Hat" class="imageicon" title="Home" style="display:none;">
+                </a>
+                
                 <a href="{% url 'index' %}">
                     <span class="top-right-text homeicon"> CoderTheCaT </span>
                 </a>
