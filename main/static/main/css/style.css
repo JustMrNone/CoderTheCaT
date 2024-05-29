@@ -276,30 +276,45 @@ body {
   text-align: center;
   opacity: 98%;
 }
-.arrowcontainer {
-  position: relative; /* Ensure the container is positioned relative */
-  height: 6.5vh; /* Optional: Set the height of the container */
+.footer-content {
+  display: flex; /* Use flexbox to align items horizontally */
+  width: 100%; /* Take full width of the container */
+  align-items: center; /* Center items vertically */
+  position: relative;
 }
 
-/* Arrow up element positioned in the bottom left corner */
-.arrowup {
-  position: absolute;
-  bottom: 20px; /* Distance from the bottom of the container */
+.arrowcontainer {
+  position: absolute; /* Position absolutely within the footer-content */
   left: 20px; /* Distance from the left side of the container */
-  /* Additional styles */
-  margin-left: 0; /* Reset margin-left if it was set elsewhere */
+}
+
+.text-container {
+  flex-grow: 1; /* Take remaining space to center the text */
+  display: flex;
+  justify-content: center; /* Center the text horizontally */
+}
+
+.text-container p {
+  margin: 0; /* Remove default margin */
+  text-align: center; /* Center the paragraph text */
+}
+
+.arrowup {
   transition: transform 0.3s ease;
   color: #4b4b4b; 
   font-size: 25px;
 }
+
 .arrowup a {
   color: inherit; /* Ensure link inherits color from .arrowup */
   text-decoration: none; /* Remove underline from link */
 }
+
 .arrowup a:visited {
   color: inherit; /* Make sure visited link doesn't change color */
 }
-.arrowup:hover{
+
+.arrowup:hover {
   transform: scale(1.3);
 }
 .switch {
