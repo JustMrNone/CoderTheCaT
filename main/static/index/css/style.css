@@ -95,14 +95,14 @@ body {
 */
 .palette-title {
     color: #1e272e;
-    margin-top: 210px;
+    margin-top: 150px;
 }
 .palette-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     padding: 20px;
-    margin-top: 150px;
+    margin-top: 50px;
 }
 
 .palette-card {
